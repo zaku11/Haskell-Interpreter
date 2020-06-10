@@ -16,3 +16,5 @@ W testach typu bad próbowałem by numer z przodu nazwy testu odpowiadał punkto
 Problemy wykryte podczas parsowania będą prefiksowane hasem "syntax error"
 Problemy wykryte podczas statycznej analizy kodu będą prefiksowane hasłem "TYPING ERROR".
 Problemy wykryte podczas działania aplikacji będą prefiksowane hasłem "RUNTIME ERROR".
+
+By zbudować aplikację należy wykonać polecenie "make", powinien powstać plik "interpreter" do którego możemy podawać kody np "./interpreter ./good/1-trzy-typy.in"
