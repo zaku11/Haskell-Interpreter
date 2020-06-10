@@ -1,0 +1,18 @@
+Jest to standardowy język imperatywny, praktycznie identyczny w składni do języka C(posiada minimalne zmiany, które opisałem w pierwszej fazie)
+
+Postanowiłem w pierwszej wersji interpretera zwiększyć zaplanowany wcześniej zakres, 
+w pliku Tabelka.txt załączam zaktualizowaną tabelkę.
+
+Większość plików powstała przez użycie BNFC i nie była przeze mnie modyfikowana
+Te które zostały przeze mnie dopisane/zmodyfikowane to:
+    - TestJanŻakGramatyka.hs -> małe zmiany kosmetyczne 
+    - AbsJanŻakGramatyka.hs -> tam znajduje się większość logiki kodu
+    - TypeChecker.hs -> fragment odpowiadający za statyczną kontrolę typów
+
+Testy są zawarte w katalogach good i bad.
+W testach typu good na początku program wypisuje spodziewany output i następnie wykonuje program
+W testach typu bad próbowałem by numer z przodu nazwy testu odpowiadał punktowi z tabelki, który jest testowany(gdzie 0 oznacza żaden).
+
+Problemy wykryte podczas parsowania będą prefiksowane hasem "syntax error"
+Problemy wykryte podczas statycznej analizy kodu będą prefiksowane hasłem "TYPING ERROR".
+Problemy wykryte podczas działania aplikacji będą prefiksowane hasłem "RUNTIME ERROR".

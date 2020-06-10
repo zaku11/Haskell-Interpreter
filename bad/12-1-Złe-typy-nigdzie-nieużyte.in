@@ -1,0 +1,8 @@
+int f() {
+    int x = "jpp";
+    return 0;
+}
+
+int main () {
+    return 0;
+}

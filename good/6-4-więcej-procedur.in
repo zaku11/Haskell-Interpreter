@@ -1,0 +1,23 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 11 32 16 8 4 2");
+
+    int x = 0;
+    void f() {
+        if (x % 2 == 0) {
+            x = x / 2;
+        } 
+        else {
+            x = x * 3 - 1;
+        }
+    }
+    void g() {
+        while(x != 1) {
+            print(x);
+            f();
+        }
+    }
+    x = 11;
+    g();
+
+    return 0;
+}

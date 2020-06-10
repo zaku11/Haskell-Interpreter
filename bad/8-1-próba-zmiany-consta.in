@@ -1,0 +1,6 @@
+int main() {
+    for(iter = 1 to 10) {
+        iter = 1;
+    }
+    return 0;
+}

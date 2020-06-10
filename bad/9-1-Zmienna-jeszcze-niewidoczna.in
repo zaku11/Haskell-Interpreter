@@ -1,0 +1,7 @@
+int main() {
+    void f() {
+        print(y);
+    }
+    int y = 3;
+    f();
+}

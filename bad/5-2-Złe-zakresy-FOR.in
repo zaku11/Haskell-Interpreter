@@ -1,0 +1,5 @@
+int main() {
+    for(iter = 1 to "jpp") {
+        print(iter);
+    }
+}

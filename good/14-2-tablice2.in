@@ -1,0 +1,14 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 1111111111");
+    
+    string[10] s;
+    s[0] = "1";
+    for(iter = 1 to 9) {
+        s[iter] = s[iter - 1] + "1";
+    }
+    string[10] copy = s;
+
+    print(copy[9]); 
+
+    return 0;
+}

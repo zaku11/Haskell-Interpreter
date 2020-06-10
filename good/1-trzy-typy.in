@@ -1,0 +1,8 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 5 someRandomString true");
+    print(5);
+    print("someRandomString");
+    print(true);
+
+    return 0;
+}

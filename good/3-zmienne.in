@@ -1,0 +1,19 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 32 firstsecond False True");
+    int x = 3, y = 7;
+    int z = x + y + x * y;
+    z++;
+    print(z);
+
+    string s1 = "first", s2;
+    s2 = "second";
+    s2 = s1 + s2;
+    print(s2);
+
+    boolean b = (true && false);
+    print(b);
+    b = true || false;
+    print(b);
+
+    return 0;
+}

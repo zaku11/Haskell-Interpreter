@@ -1,0 +1,12 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 12");
+    int x = 3;
+    void double() {x = x * 2;}
+    void quadrup()  {double(); double();}
+
+    quadrup();    
+
+    print(x);
+
+    return 0;
+}

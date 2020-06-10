@@ -1,0 +1,6 @@
+int main() {
+    int[10] i1,i2;
+    boolean[10] b;
+    i1 = i2;
+    b = i1;
+}

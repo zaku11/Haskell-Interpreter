@@ -1,0 +1,9 @@
+int main() {
+    void f() {
+        print("Before break");
+        break;
+        print("After break");
+    }
+    f();    
+    return 0;
+}

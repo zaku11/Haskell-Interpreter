@@ -1,0 +1,25 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 16 16 16");
+
+    int f(int x) {
+        int g(int x) {
+            return x + x;
+        }
+        return g(g(x));
+    }
+    print(f(4));
+
+    int g(int x) {
+        return x;
+    }
+    print(f(4));
+    
+    { 
+        int g(int x) {
+            return x;
+        }
+        print(f(4));  
+    }
+
+    return 0;
+}

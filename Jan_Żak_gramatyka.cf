@@ -1,0 +1,79 @@
+----- This grammar is based on the grammar linked in the stating of the problem ------
+----- https://www.mimuw.edu.pl/~ben/Zajecia/Mrj2019/Latte/Latte.cf -------------------
+
+-- Programs ------------------------------------------------
+entrypoints Program ;
+ProgramDef. Program ::= [FuncDecl] ;
+FunDef.	    FuncDecl ::= Type Ident "(" [Arg] ")" Block ;
+separator nonempty FuncDecl "" ;
+ArgDef.     Arg ::= Type Ident;
+separator   Arg "," ;
+FunToStmt.  Stmt ::= FuncDecl ;
+
+-- Arrays --------------------------------------------------
+ArrIdent.   ExpIdent ::= Ident "[" Expr "]";
+NormalIdent. ExpIdent ::= Ident;
+
+-- Statements ----------------------------------------------
+BlockDef.   Block ::= "{" [Stmt] "}" ;
+separator   Stmt "" ;
+EmptySt.    Stmt ::= ";" ;
+StmToB.     Stmt ::= Block ;
+Init.       Item ::= Ident "=" Expr ;
+EmpInit.    Item ::= Ident ;
+Decl.       Stmt ::= Type [Item] ";"  ;
+separator nonempty Item "," ;
+Assign.     ModifyStmt ::= ExpIdent "=" Expr ;
+Incr.       ModifyStmt ::= ExpIdent "++"  ;
+Decr.       ModifyStmt ::= ExpIdent "--"  ;
+ModToStmt.  Stmt ::= ModifyStmt ";" ; 
+Ret.        Stmt ::= "return" Expr ";" ;
+VRet.       Stmt ::= "return" ";" ;
+If.         Stmt ::= "if" "(" Expr ")" Block  ;
+IfElse.     Stmt ::= "if" "(" Expr ")" Block "else" Block  ;
+While.      Stmt ::= "while" "(" Expr ")" Block ;
+ForPscl.    Stmt ::= "for" "(" Ident "=" Expr "to" Expr ")" Block ; 
+SExp.       Stmt ::= Expr ";" ;
+Break.      Stmt ::= "break" ";" ;
+Continue.   Stmt ::= "continue" ";" ;
+
+-- Types ---------------------------------------------------
+Int.        Type ::= "int" ;
+Str.        Type ::= "string" ;
+Bool.       Type ::= "boolean" ;
+Void.       Type ::= "void" ;
+Array.      Type ::= Type "[" Expr "]" ; 
+
+-- Expressions ---------------------------------------------
+EVar.       Expr6 ::= ExpIdent ;
+ELitInt.    Expr6 ::= Integer ;
+ELitTrue.   Expr6 ::= "true" ;
+ELitFalse.  Expr6 ::= "false" ;
+EApp.       Expr6 ::= Ident "(" [Expr] ")" ;
+EString.    Expr6 ::= String ;
+Neg.        Expr5 ::= "-" Expr6 ;
+Not.        Expr5 ::= "!" Expr6 ;
+EMul.       Expr4 ::= Expr4 StrOp Expr5 ;
+EAdd.       Expr3 ::= Expr3 WeakOp Expr4 ;
+ERel.       Expr2 ::= Expr2 RelOp Expr3 ;
+EAnd.       Expr1 ::= Expr2 "&&" Expr1 ;
+EOr.        Expr ::= Expr1 "||" Expr ;
+coercions   Expr 6 ;
+separator   Expr "," ;
+
+-- Operators -----------------------------------------------
+Plus.       WeakOp ::= "+" ;
+Minus.      WeakOp ::= "-" ;
+Mul.        StrOp ::= "*" ;
+Div.        StrOp ::= "/" ;
+Mod.        StrOp ::= "%" ;
+Less.       RelOp ::= "<" ;
+LessOrEq.   RelOp ::= "<=" ;
+Greater.    RelOp ::= ">" ;
+GrtOrEq.    RelOp ::= ">=" ;
+Eq.         RelOp ::= "==" ;
+NotEq.      RelOp ::= "!=" ;
+
+-- Comments ------------------------------------------------
+comment     "//" ;
+comment     "/*" "*/" ;

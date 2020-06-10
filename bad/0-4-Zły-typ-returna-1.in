@@ -1,0 +1,8 @@
+int f()  {
+    return "str";
+}
+
+int main() {
+    string x = f();
+    return 0;
+}

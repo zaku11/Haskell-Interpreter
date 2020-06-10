@@ -1,0 +1,21 @@
+int main() {
+    print("EXPECTED OUTPUT IS: Prime Haskell is the best");
+    int x = 37;
+    int i = 2;
+    while (i < x) {
+        if (x % i == 0) {
+            print("Not prime");
+            return 0;
+        }
+        i++;
+    }
+    print("Prime");
+
+    string lang = "Haskell";
+    if(lang == "Haskell") {
+        print("Haskell is the best");
+    }
+
+
+    return 0;
+}

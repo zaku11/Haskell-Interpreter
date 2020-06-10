@@ -1,0 +1,19 @@
+int doubleI(int x) {
+    return 2 * x;
+}
+string doubleS(string s) {
+    return s + s;
+}
+boolean doubleB(boolean b) {
+    return b && !b;
+}
+
+int main()  {
+    print("EXPECTED OUTPUT IS: 6 JppJpp False");
+
+    print(doubleI(3));
+    print(doubleS("Jpp"));
+    print(doubleB(false));
+
+    return 0;
+}

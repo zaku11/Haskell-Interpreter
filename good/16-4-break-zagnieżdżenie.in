@@ -1,0 +1,15 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 1 2 3");
+
+    while(true) {
+        print("1");
+        while(true) {
+            print("2");
+            break;
+        }
+        print("3");
+        break;
+    }
+
+    return 0;
+}

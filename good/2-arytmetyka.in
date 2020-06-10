@@ -1,0 +1,27 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 7 1 1 1 False True False False True firstsecond False True True False False");
+
+    int x = 4, y = 3;
+    print(x + y);
+    print(x % y);
+    print(x / y);
+    print(x - y);
+    
+    print(x < y);
+    print(x > y);
+    print(x == y);
+    print(x <= y);
+    print(x != y);
+    
+    string s1 = "first", s2 = "second";
+    print(s1 + s2);
+    print(s1 == s2);
+    print(s1 == s1);
+    print("a" + "b" + "c" == "abc");
+
+    boolean tr = true, fl = false;
+    print(tr == fl);
+    print(!tr);
+
+    return 0;
+}

@@ -1,0 +1,28 @@
+
+
+int main() {
+    print("EXPECTED OUTPUT IS: paf X pif X X pifpaf X X pif X paf");
+
+    int x = 9;
+    while(x < 20) {
+        x++;
+
+        if(x % 3 == 0) {
+            if(x % 5 == 0) {
+                print("pifpaf");
+                continue;
+            }
+            print("pif");
+            continue;
+        }
+
+        if(x % 5 == 0) {
+            print("paf");
+            continue;
+        }
+
+        print("X");
+    }
+
+    return 0;
+}

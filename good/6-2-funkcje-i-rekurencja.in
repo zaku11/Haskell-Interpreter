@@ -1,0 +1,43 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 5 8 13 6 24 120 no no no yes");
+
+    int f(int x) {
+        if(x == 1 || x == 0) {
+            return 1;
+        }
+        return f(x-1) + f(x-2);
+    }
+
+    print(f(4));
+    print(f(5));
+    print(f(6)); 
+
+
+    int fact(int x) {
+        if(x == 1) {
+            return 1;
+        }
+        return x * fact(x - 1);
+    }
+
+    print(fact(3)); 
+    print(fact(4)); 
+    print(fact(5)); 
+
+
+    int x = 4;
+    void isXOne() {
+        if(x == 1) {
+            print("yes");
+        }
+        else {
+            print("no");
+            x--;
+            isXOne();
+        }
+    }
+    isXOne();
+    
+    
+    return 0;
+}

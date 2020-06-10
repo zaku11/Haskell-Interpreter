@@ -1,0 +1,34 @@
+
+
+boolean isPrime(int x) {
+    boolean result = false;
+    int iter = 2;
+    while(true) {
+        if(x == iter) {
+            result = true;
+            break;
+        }
+        else {
+            if(x % iter == 0) {
+                result = false;
+                break;
+            } 
+            else {
+                iter++;
+            }
+        }
+    }
+
+    return result;
+}
+
+int main() {
+    print("EXPECTED OUTPUT IS: True False False True");
+
+    print(isPrime(11));
+    print(isPrime(51));
+    print(isPrime(57));
+    print(isPrime(61));
+
+    return 0;
+}

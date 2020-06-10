@@ -1,0 +1,22 @@
+int sum(int[3] t) {
+    int x = 0;
+    for(iter = 0 to 2) {
+        x = x + t[iter];
+    }
+    return x;
+}
+
+int main() {
+    print("EXPECTED OUTPUT IS: 3 6 9");
+    int[3] x1, x2, x3;
+    for(iter = 0 to 2) {
+        x1[iter] = iter;
+        x2[iter] = iter + 1;
+        x3[iter] = 3 * iter;
+    }
+    print(sum(x1));
+    print(sum(x2));
+    print(sum(x3));
+
+    return 0;
+}

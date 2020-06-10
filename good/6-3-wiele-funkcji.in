@@ -1,0 +1,33 @@
+int double(int x) {
+    return x * 2;
+}
+
+int divide(int x, int y) {
+    return x / y;
+}
+
+string wrap(string s, int x) {
+    for(i = 1 to x) {
+        s = "#" + s + "#";
+    }
+    return s;
+}
+
+string wrap2(string s, int x) {
+    if(x == 0) {
+        return s;
+    }
+    return "#" + wrap2(s, x - 1) + "#";
+}
+
+int main() {
+    print("EXPECTED OUTPUT IS: 10 ###middle### ###middle###");
+
+    print(divide(double(35) , 7));
+    string s = wrap("middle", 3);
+    print(s);
+    s = wrap2("middle", 3);
+    print(s);
+
+    return 0;
+}

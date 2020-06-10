@@ -1,0 +1,10 @@
+int main() {
+    {
+        void f() {
+            print("123");
+        }
+    }
+    f();
+
+    return 0;
+}

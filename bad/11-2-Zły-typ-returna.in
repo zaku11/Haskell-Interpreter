@@ -1,0 +1,6 @@
+int main() {
+    int x() {
+        return true;
+    }
+    return 0;
+}

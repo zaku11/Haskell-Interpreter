@@ -1,0 +1,9 @@
+int main() {
+    void f() {
+        print("Before continue");
+        continue;
+        print("After continue");
+    }
+    f();    
+    return 0;
+}

@@ -1,0 +1,19 @@
+int main() {
+    int x = 7;
+
+    print("EXPECTED OUTPUT IS: 8 2 8 4 9 3 10 2 10 5");
+
+    while(x < 10) {
+        x++;
+        int y = 1;
+        while(y < x - 1) {
+            y++;
+            if ( (x % y) != 0) {
+                continue;
+            }
+            print(x);
+            print(y);
+        }
+    }
+    return 0;
+}

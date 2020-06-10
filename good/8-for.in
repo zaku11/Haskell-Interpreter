@@ -1,0 +1,22 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 55 1 2 3 1 2 3 1 2 3 49 56 56 64");
+    int x = 0;
+    int y = 10;
+    for(iter = (4 - 3) to (y + y - y)) {
+        x = x + iter;
+    }
+    print(x);
+
+    for(iter = 1 to 3) {
+        for(iter = 1 to 3) {
+            print(iter);
+        }
+    }
+    for(i = 7 to 8) {
+        for(j = 7 to 8) {
+            print(i * j);
+        }
+    }
+    
+    return 0;
+}

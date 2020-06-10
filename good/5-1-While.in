@@ -1,0 +1,14 @@
+int main() {
+    print("EXPECTED OUTPUT IS: The root of 49 is 7 ");
+    
+    int x = 1, y = 49;
+    while (x * x < y) {
+        x++;
+    }
+    print("The root of");
+    print(y);
+    print("is");
+    print(x);
+
+    return 0;
+}

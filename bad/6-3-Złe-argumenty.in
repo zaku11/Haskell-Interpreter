@@ -1,0 +1,8 @@
+int main() {
+    int f(int x) {
+        return x+x;
+    }
+    print(f("str"));
+
+    return 0;
+}

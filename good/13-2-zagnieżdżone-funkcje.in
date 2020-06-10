@@ -1,0 +1,28 @@
+int main() {
+
+    print("EXPECTED OUTPUT IS: 86");
+
+    int a(int x) {
+        int b(int y) {
+            int identity(int p) {
+                int v = 0;
+                for(iter = 1 to p) {
+                    v++;
+                }
+                return v;
+            }
+            return identity(y) + 1;
+        }
+        int c(int z) {
+            return b(z);
+        }
+
+        return b(x) + c(x);
+    }
+
+    int x = a(42);
+
+    print(x);
+
+    return 0;
+}

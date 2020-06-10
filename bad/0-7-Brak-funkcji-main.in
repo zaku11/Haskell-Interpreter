@@ -1,0 +1,9 @@
+int notmain() {
+    print(3);
+    return 0;
+}
+int alsonotmain() {
+    int x;
+    x++;
+    return 0;
+}

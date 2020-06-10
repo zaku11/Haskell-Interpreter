@@ -1,0 +1,16 @@
+int main() {
+    print("EXPECTED OUTPUT IS: Before 2");
+
+    int ptr = 1;
+    while(true) {
+        print("Before");
+        ptr++;
+        break;
+        print("After");
+        ptr++;
+    }
+    print(ptr);
+    
+    return 0;
+}
+

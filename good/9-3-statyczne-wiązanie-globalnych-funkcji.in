@@ -1,0 +1,21 @@
+int operator(int x, int y) {
+    return x * y;
+}
+int combine(int x) {
+    return operator(x, x);
+}
+int operator(int x, int y) {
+    return 0;
+}
+
+int main() {
+    print("EXPECTED OUTPUT IS: 49 49");
+
+    print(combine(7));
+    int operator(int x,int y) {
+        return 0;
+    }
+    print(combine(7));
+
+    return 0;
+}

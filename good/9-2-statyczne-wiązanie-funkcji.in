@@ -1,0 +1,30 @@
+int main() {
+    print("EXPECTED OUTPUT IS: 12 12 12");
+
+    int trans(int x) {
+        return x;
+    }
+    int app(int x) {
+        return x + trans(x);
+    }
+    int double_app(int x) {
+        x = app(x);
+        x = app(x);
+        return x;
+    }
+    {
+        print(double_app(3));
+
+        int app(int x) {
+            return x;
+        }
+        print(double_app(3));
+
+        void trans(int x) {
+            return;
+        }
+        print(double_app(3));
+    }
+
+    return 0;
+}

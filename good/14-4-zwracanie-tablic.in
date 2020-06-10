@@ -1,0 +1,18 @@
+int[10] fibs() {
+    int[10] f;
+    f[0] = 0;
+    f[1] = 1;
+    for(iter = 2 to 9) {
+        f[iter] = f[iter - 1] + f[iter - 2];
+    }
+    return f;
+}
+
+int main() {
+    print("EXPECTED OUTPUT IS: 0 1 1 2 3 5 8 13 21 34");
+    int[10] ans = fibs();
+    for(iter = 0 to 9) {
+        print(ans[iter]);
+    }
+    return 0;
+}
